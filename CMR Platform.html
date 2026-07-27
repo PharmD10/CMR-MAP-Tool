@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CMR Platform</title>
+	<script src="lookupData.js" defer></script>  <!--Array of all MAP output-->
+	<script src="drugClass.js" defer></script>  <!--Section 2 operations-->
+	<script src="mapData.js" defer></script>  <!--Array of all MAP outputs-->
+	<script src="CMRButtonDisplay.js" defer></script>
+</head>
+<body>
+	<header>
+		<h1>MTM CMR Documentation Platform</h1>
+	</header>
+	<main>
+		<section>
+			<h2>Section 1: Patient Information</h2>
+			<form>
+				<fieldset>
+					<legend>Enter in the patient's age and smoking history.</legend>
+					<div>
+						<label for="ptage">Age: </label>
+						<input type="number" id="ptage" name="ptage">
+					</div>
+					<div>
+						<label for="ptSmoke">Smoking status:</label>
+						<select name="ptSmoke" id="ptSmoke">
+							<option value="smokecur">Current Smoker</option>
+							<option value="smokefor">Former Smoker</option>
+							<option value="smokenon">Non-smoker</option>
+						</select>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+		<section>
+			<h2>Section 2: Medications</h2>
+			<form id="medicationsForm">
+			    <fieldset>
+			        <legend>Enter in the patient's medications.</legend>
+			        <table border="1">
+			            <thead>
+			                <tr>
+			                    <th>#</th>
+			                    <th>Medications</th>
+			                    <th>Medication Class</th>
+			                </tr>
+			            </thead>
+			            <tbody id="medicationsTableBody">
+			                <!-- Generates 25 rows for manual entry or spreadsheet-style pasting -->
+			                
+			            </tbody>
+			        </table>
+			    </fieldset>
+			</form>
+		</section>
+		<section>
+			<h2>Section 3: Health Conditions</h2>
+			<fieldset>
+				<legend>Enter or select the patient's health conditions.</legend>
+			  	<table border="1" style="width: 100%; border-collapse: collapse;">
+			    	<thead>
+			      		<tr>
+					        <th style="width: 40px; text-align: center;">#</th>
+					        <th style="text-align: left; padding-left: 8px;">Condition</th>
+			      		</tr>
+			    	</thead>
+				    <tbody id="conditionsTableBody"> <!-- CMRButtonDisplay.js will automatically generate the 25 input rows here -->
+				    </tbody>
+			  	</table>
+			</fieldset>
+		</section>
+		<section>
+			<h2>Section 4: Vaccines Needed</h2>
+			<form>
+				<fieldset>
+					<legend>Check any vaccines this patient is eligible to receive.</legend>
+					<div>
+						<div>
+							<label for="vaxflu">FLU</label>
+	  						<input type="checkbox" id="vaxflu" name="vaxflu">
+						</div>
+						<div>
+							<label for="vaxcovid">COVID</label>
+		  					<input type="checkbox" id="vaxcovid" name="vaxcovid">
+						</div>
+						<div>
+							<label for="vaxrsv">RSV</label>
+	  						<input type="checkbox" id="vaxrsv" name="vaxrsv">
+						</div>
+						<div>
+							<label for="vaxpneu">PNEUMONIA</label>
+		  					<input type="checkbox" id="vaxpneu" name="vaxpneu">
+						</div>
+						<div>
+							<label for="vaxshin">SHINGLES</label>
+		  					<input type="checkbox" id="vaxshin" name="vaxshin">
+						</div>
+						<div>
+							<label for="vaxhepb">HEPATITIS B</label>
+		  					<input type="checkbox" id="vaxhepb" name="vaxhepb">
+						</div>
+						<div>
+							<label for="vaxtet">TETANUS</label>
+		  					<input type="checkbox" id="vaxtet" name="vaxtet">
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+		<section>
+			<h2>Section 5: Diabetic Testing Device</h2>
+			<form>			
+				<fieldset>
+					<legend>Enter in the patient's information about their glycemic device (if applicable).</legend>
+					<div>
+						<label for="dmdevname">Device Name: </label>
+						<input type="text" id="dmdevname" name="dmdevname">
+					</div>
+					<div>
+						<label for="dmdevtype">Device Type:</label>
+						<select name="dmdevtype" id="dmdevtype">
+							<option value="dmcgm">CGM</option>
+							<option value="dmsmbg">SMBG</option>
+						</select>
+					</div>
+				</fieldset>
+			</form>
+		</section><br>
+	</main>
+	<section>
+		<button id="submitBtn">Generate CMR Text</button>
+	</section>
+	<section>
+		<div id="ptContainer">
+			<p>Smoking Status: <strong id="displayValue">Pending...</strong></p>
+			<p id="beersWarning"></p>
+			<p>Recommended vaccines: <span id="vaxList"></p>
+			<p>Health Conditions:
+				<strong id="displayValue">None selected</strong>
+    		</p>
+		</div>
+	</section>
+</body>
+</html>
