@@ -270,6 +270,7 @@ function getCnsDepMeds(activeMeds, medsByClass) {
 
   return detectedCnsDepMeds;
 }
+
 // Safe datalist populator
 function populateDatalist() {
   let datalist = document.getElementById("healthConditionsList");
@@ -313,7 +314,7 @@ function buildTableRows(rowCount) {
   for (let i = 1; i <= rowCount; i++) {
     rowsHTML += `
       <tr>
-        <td style="text-align: center;">${i}</td>
+        <td class="table-cell-center">${i}</td>
         <td>
           <input 
             type="text" 
@@ -323,7 +324,6 @@ function buildTableRows(rowCount) {
             class="condition-cell condition-input" 
             placeholder="Type or select condition..."
             onfocus="populateDatalist();"
-            style="width: 98%; padding: 4px;"
           />
         </td>
       </tr>
@@ -421,6 +421,7 @@ function applyMedicationReplacements(discussText, planText) {
     discussText = discussText.replaceAll("{{SEROSYN_A}}", "your serotonergic medication").replaceAll("{{SEROSYN_B}}", "another serotonergic medication");
     planText = planText.replaceAll("{{SEROSYN_A}}", "your serotonergic medication").replaceAll("{{SEROSYN_B}}", "another serotonergic medication");
   }
+
   // RESPIRATORY DEPRESSION RISK REPLACEMENTS
   const detectedRespDepMeds = getRespDepMeds(activeMeds, medsByClass);
 
@@ -549,8 +550,7 @@ function copyTableToClipboard(tableId) {
 function fallbackCopyText(text) {
   const textarea = document.createElement("textarea");
   textarea.value = text;
-  textarea.style.position = "fixed";
-  textarea.style.opacity = "0";
+  textarea.className = "copy-fallback-textarea";
   document.body.appendChild(textarea);
   textarea.focus();
   textarea.select();
@@ -742,7 +742,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // --- Auto-Trigger 7: DDI Respiratory Depression ---
+    // --- Auto-Trigger 8: DDI CNS Depression ---
     const detectedCnsDepMeds = getCnsDepMeds(activeMeds, medsByClass);
 
     if (detectedCnsDepMeds.length >= 2) {
@@ -825,32 +825,26 @@ document.addEventListener("DOMContentLoaded", () => {
         const tableId = `cmr-table-${index}`;
 
         outputHTML += `
-          <div class="cmr-table-wrapper" style="margin-bottom: 30px;" data-category="${matchedData.mapCategory}">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <h3 style="margin: 0;">${matchedData.mapCategory} <span style="color: #666; font-size: 0.85em;">(${matchedData.mapCode})</span></h3>
-              <button type="button" class="copy-btn" onclick="copyTableToClipboard('${tableId}')" style="padding: 5px 10px; cursor: pointer;">
+          <div class="cmr-table-wrapper" data-category="${matchedData.mapCategory}">
+            <div class="cmr-table-wrapper-header">
+              <h3 class="cmr-table-wrapper-title">
+                ${matchedData.mapCategory} <span class="cmr-table-wrapper-code">(${matchedData.mapCode})</span>
+              </h3>
+              <button type="button" class="copy-btn" onclick="copyTableToClipboard('${tableId}')">
                 📋 Copy Text
               </button>
             </div>
 
-            <table id="${tableId}" border="1" style="border-collapse: collapse; width: 100%; text-align: left; font-family: Arial, sans-serif;">
+            <table id="${tableId}" class="cmr-generated-table">
               <tbody>
                 <tr>
-                  <th style="background-color: #f2f2f2; padding: 8px; width: 25%; vertical-align: top;">
-                    What did I discuss with the patient / Goal?
-                  </th>
-                  <td class="copyable-discuss" style="padding: 10px; width: 75%; vertical-align: top;">
-                    ${discussText}
-                  </td>
+                  <th>What did I discuss with the patient / Goal?</th>
+                  <td class="copyable-discuss">${discussText}</td>
                 </tr>
                 <tr>
-                  <th style="background-color: #f2f2f2; padding: 8px; width: 25%; vertical-align: top;">
-                    What action does the patient need to take?
-                  </th>
-                  <td class="copyable-plan" style="padding: 10px; width: 75%; vertical-align: top;">
-                    <ul style="margin: 0; padding-left: 20px;">
-                      ${planItems}
-                    </ul>
+                  <th>What action does the patient need to take?</th>
+                  <td class="copyable-plan">
+                    <ul>${planItems}</ul>
                   </td>
                 </tr>
               </tbody>
@@ -859,7 +853,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       } else {
         outputHTML += `
-          <div class="cmr-table-wrapper" style="margin-bottom: 25px;">
+          <div class="cmr-table-wrapper">
             <h3>${categoryName}</h3>
             <p><em>No matching guidelines found in mapData.js.</em></p>
           </div>
