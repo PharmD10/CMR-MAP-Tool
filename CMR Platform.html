@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CMR Platform</title>
-	<script src="lookupData.js" defer></script>  <!--Array of all MAP output-->
-	<script src="drugClass.js" defer></script>  <!--Section 2 operations-->
+	<script src="section2drug.js" defer></script>  <!--Array of all drugs-->
 	<script src="mapData.js" defer></script>  <!--Array of all MAP outputs-->
+	<script src="section2logic.js" defer></script>  <!--Section 2 logic-->
+	<script src="section5.js" defer></script> <!--Section 5 logic-->
 	<script src="CMRButtonDisplay.js" defer></script>
 </head>
 <body>
@@ -34,7 +35,7 @@
 				</fieldset>
 			</form>
 		</section>
-		<section>
+		<section id="section2">
 			<h2>Section 2: Medications</h2>
 			<form id="medicationsForm">
 			    <fieldset>
@@ -47,9 +48,7 @@
 			                    <th>Medication Class</th>
 			                </tr>
 			            </thead>
-			            <tbody id="medicationsTableBody">
-			                <!-- Generates 25 rows for manual entry or spreadsheet-style pasting -->
-			                
+			            <tbody id="medicationsTableBody"> <!-- Generates 25 rows for meds-->
 			            </tbody>
 			        </table>
 			    </fieldset>
@@ -112,11 +111,11 @@
 		<section>
 			<h2>Section 5: Diabetic Testing Device</h2>
 			<form>			
-				<fieldset>
+				<fieldset id="section5Fieldset" disabled style="opacity: 0.5; transition: opacity 0.3s;">
 					<legend>Enter in the patient's information about their glycemic device (if applicable).</legend>
 					<div>
 						<label for="dmdevname">Device Name: </label>
-						<input type="text" id="dmdevname" name="dmdevname">
+						<input type="text" id="dmdevname" name="dmdevname" placeholder="e.g., FreeStyle Libre 3">
 					</div>
 					<div>
 						<label for="dmdevtype">Device Type:</label>
