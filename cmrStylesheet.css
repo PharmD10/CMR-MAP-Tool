@@ -1,0 +1,147 @@
+/* Universal Box-Sizing Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+section {
+  background-color: lightblue;
+  opacity: 0.8;
+}
+
+h2 {
+  text-align: center;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* ==========================================
+   LAYOUT: SIDE-BY-SIDE SECTIONS (2 & 3)
+   ========================================== */
+.sections-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.section-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-column table {
+  width: 100%;
+}
+
+/* Sync row heights across Section 2 and Section 3 */
+.section-column table td,
+.section-column table th {
+  height: 32px;
+  vertical-align: middle;
+}
+
+.section-column select {
+  width: 100%;
+  height: 28px;
+}
+
+/* ==========================================
+   TABLE CELLS & INPUT ELEMENTS
+   ========================================== */
+.condition-input {
+  width: 100%;
+  height: 28px;
+  padding: 4px;
+}
+
+.table-cell-center {
+  text-align: center;
+}
+
+/* ==========================================
+   SECTION 4: VACCINE GRID
+   ========================================== */
+.vaccine-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.vaccine-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  border: blue solid;
+}
+
+/* ==========================================
+   DYNAMIC GENERATED CMR TABLES & UTILITIES
+   ========================================== */
+.cmr-table-wrapper {
+  margin-bottom: 30px;
+  border: black solid;
+}
+
+.cmr-table-wrapper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cmr-table-wrapper-title {
+  margin: 0;
+}
+
+.cmr-table-wrapper-code {
+  color: #666;
+  font-size: 0.85em;
+}
+
+.copy-btn {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cmr-generated-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.cmr-generated-table th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  width: 25%;
+  vertical-align: top;
+}
+
+.cmr-generated-table td {
+  padding: 10px;
+  width: 75%;
+  vertical-align: top;
+}
+
+.copyable-plan ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.copy-fallback-textarea {
+  position: fixed;
+  opacity: 0;
+}
