@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CMR Platform</title>
+	<link rel="stylesheet" type="text/css" href="cmrstylesheet.css">
 	<script src="section2drug.js" defer></script>  <!--Array of all drugs-->
 	<script src="mapData.js" defer></script>  <!--Array of all MAP outputs-->
 	<script src="section2logic.js" defer></script>  <!--Section 2 logic-->
 	<script src="section5.js" defer></script> <!--Section 5 logic-->
-	<script src="CMRButtonDisplay.js" defer></script>
+	<script src="cmrButtonDisplay.js" defer></script>
 </head>
 <body>
 	<header>
@@ -19,7 +20,7 @@
 			<h2>Section 1: Patient Information</h2>
 			<form>
 				<fieldset>
-					<legend>Enter in the patient's age and smoking history.</legend>
+					<p>Enter in the patient's age and smoking history.</p>
 					<div>
 						<label for="ptage">Age: </label>
 						<input type="number" id="ptage" name="ptage">
@@ -32,75 +33,33 @@
 							<option value="smokenon">Non-smoker</option>
 						</select>
 					</div>
-				</fieldset>
-			</form>
-		</section>
-		<section id="section2">
-			<h2>Section 2: Medications</h2>
-			<form id="medicationsForm">
-			    <fieldset>
-			        <legend>Enter in the patient's medications.</legend>
-			        <table border="1">
-			            <thead>
-			                <tr>
-			                    <th>#</th>
-			                    <th>Medications</th>
-			                    <th>Medication Class</th>
-			                </tr>
-			            </thead>
-			            <tbody id="medicationsTableBody"> <!-- Generates 25 rows for meds-->
-			            </tbody>
-			        </table>
-			    </fieldset>
-			</form>
-		</section>
-		<section>
-			<h2>Section 3: Health Conditions</h2>
-			<fieldset>
-				<legend>Enter or select the patient's health conditions.</legend>
-			  	<table border="1" style="width: 100%; border-collapse: collapse;">
-			    	<thead>
-			      		<tr>
-					        <th style="width: 40px; text-align: center;">#</th>
-					        <th style="text-align: left; padding-left: 8px;">Condition</th>
-			      		</tr>
-			    	</thead>
-				    <tbody id="conditionsTableBody"> <!-- CMRButtonDisplay.js will automatically generate the 25 input rows here -->
-				    </tbody>
-			  	</table>
-			</fieldset>
-		</section>
-		<section>
-			<h2>Section 4: Vaccines Needed</h2>
-			<form>
-				<fieldset>
-					<legend>Check any vaccines this patient is eligible to receive.</legend>
-					<div>
-						<div>
+					<p>Check any vaccines this patient is eligible to receive.</p>
+					<div class="vaccine-grid">
+						<div class="vaccine-item">
 							<label for="vaxflu">FLU</label>
 	  						<input type="checkbox" id="vaxflu" name="vaxflu">
 						</div>
-						<div>
+						<div class="vaccine-item">
 							<label for="vaxcovid">COVID</label>
 		  					<input type="checkbox" id="vaxcovid" name="vaxcovid">
 						</div>
-						<div>
+						<div class="vaccine-item">
 							<label for="vaxrsv">RSV</label>
 	  						<input type="checkbox" id="vaxrsv" name="vaxrsv">
 						</div>
-						<div>
+						<div class="vaccine-item">
 							<label for="vaxpneu">PNEUMONIA</label>
 		  					<input type="checkbox" id="vaxpneu" name="vaxpneu">
 						</div>
-						<div>
+						<div class="vaccine-item">
 							<label for="vaxshin">SHINGLES</label>
 		  					<input type="checkbox" id="vaxshin" name="vaxshin">
 						</div>
-						<div>
+						<div class="vaccine-item">
 							<label for="vaxhepb">HEPATITIS B</label>
 		  					<input type="checkbox" id="vaxhepb" name="vaxhepb">
 						</div>
-						<div>
+						<div class="vaccine-item">
 							<label for="vaxtet">TETANUS</label>
 		  					<input type="checkbox" id="vaxtet" name="vaxtet">
 						</div>
@@ -108,8 +67,45 @@
 				</fieldset>
 			</form>
 		</section>
+		<div class="sections-row">
+			<section class="section-column">
+				<h2>Section 2: Medications</h2>
+				<form id="medicationsForm">
+				    <fieldset>
+				        <legend>Enter in the patient's medications.</legend>
+				        <table border="1">
+				            <thead>
+				                <tr>
+				                    <th>#</th>
+				                    <th>Medications</th>
+				                    <th>Medication Class</th>
+				                </tr>
+				            </thead>
+				            <tbody id="medicationsTableBody"> <!-- Generates 25 rows for meds-->
+				            </tbody>
+				        </table>
+				    </fieldset>
+				</form>
+			</section>
+			<section class="section-column">
+				<h2>Section 3: Health Conditions</h2>
+				<fieldset>
+					<legend>Enter or select the patient's health conditions.</legend>
+				  	<table>
+				    	<thead>
+				      		<tr>
+						        <th>#</th>
+						        <th>Condition</th>
+				      		</tr>
+				    	</thead>
+					    <tbody id="conditionsTableBody"> <!-- CMRButtonDisplay.js will automatically generate the 25 input rows here -->
+					    </tbody>
+				  	</table>
+				</fieldset>
+			</section>
+		</div>
 		<section>
-			<h2>Section 5: Diabetic Testing Device</h2>
+			<h2>Section 4: Diabetic Testing Device</h2>
 			<form>			
 				<fieldset id="section5Fieldset" disabled style="opacity: 0.5; transition: opacity 0.3s;">
 					<legend>Enter in the patient's information about their glycemic device (if applicable).</legend>
@@ -130,15 +126,10 @@
 	</main>
 	<section>
 		<button id="submitBtn">Generate CMR Text</button>
-	</section>
+	</section><br>
+	<h1>Customized MAP for this patient</h1>
 	<section>
 		<div id="ptContainer">
-			<p>Smoking Status: <strong id="displayValue">Pending...</strong></p>
-			<p id="beersWarning"></p>
-			<p>Recommended vaccines: <span id="vaxList"></p>
-			<p>Health Conditions:
-				<strong id="displayValue">None selected</strong>
-    		</p>
 		</div>
 	</section>
 </body>
