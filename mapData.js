@@ -23,9 +23,9 @@ const mapOutputData = [
     mapCategory: "GERD",
     mapCode: "GI06032",
     mapDiscuss:
-      "LANSOPRAZOLE helps reduce stomach acid production. Long-term PPI use should be reviewed with your doctor.",
+      "{{PPI}} helps reduce stomach acid production. Long-term PPI use should be reviewed with your doctor.",
     mapPlan:
-      "Take your LANSOPRAZOLE 30-60 minutes before your first daily meal. \n Talk with your doctor about assessing long-term PPI use. \n Avoid foods and drinks that trigger heartburn like spicy foods, citrus, tomatoes, caffeine, and alcohol. \n Wait at least 2-3 hours after eating to lie down. Elevate the head of your bed if you have nighttime symptoms. \n Avoid smoking.",
+      "Take your {{PPI}} 30-60 minutes before your first daily meal. \n Talk with your doctor about assessing long-term PPI use. \n Avoid foods and drinks that trigger heartburn like spicy foods, citrus, tomatoes, caffeine, and alcohol. \n Wait at least 2-3 hours after eating to lie down. Elevate the head of your bed if you have nighttime symptoms.",
     mapDisplay: false,
     mapOrder: 3
   },
@@ -33,9 +33,9 @@ const mapOutputData = [
     mapCategory: "Osteoporosis",
     mapCode: "BONE06031",
     mapDiscuss:
-      "GUIDELINE GOALS: •DEXA scan every 1-2 years or as directed. Taking _bisphosphonate_ , along with adequate calcium and vitamin D, protects your bones health and reduces your fracture risk.",
+      "GUIDELINE GOALS: •DEXA scan every 1-2 years or as directed. Taking {{BISPHOSPHONATE}}, along with adequate calcium and vitamin D, protects your bones health and reduces your fracture risk.",
     mapPlan:
-      "Take your _bisphosphonate_ first thing in the morning on an empty stomach with a full glass of plain water. Stay upright for the next 30 minutes, and do not eat, drink anything (except water), or take other medications during this time. \n Get daily calcium and vitamin D through diet or supplements. \n Schedule your DEXA scan every 1-2 years, or as directed. \n Report jaw pain or mouth sores that do not heal. \n Stay active with weight-bearing exercises (eg, walking, light weightlifting).",
+      "Take your {{BISPHOSPHONATE}} first thing in the morning on an empty stomach with a full glass of plain water. Stay upright for the next 30 minutes, and do not eat, drink anything (except water), or take other medications during this time. \n Get daily calcium and vitamin D through diet or supplements. \n Schedule your DEXA scan every 1-2 years, or as directed. \n Report jaw pain or mouth sores that do not heal. \n Stay active with weight-bearing exercises (eg, walking, light weightlifting).",
     mapDisplay: false,
     mapOrder: 4
   },
@@ -85,7 +85,7 @@ const mapOutputData = [
     mapDiscuss:
       "GUIDELINE GOALS: ≤2 days per week of daytime symptoms or rescue inhaler use; no sleep disturbance due to asthma; unrestricted physical activity.",
     mapPlan:
-      "Use your UMECLIDINIUM-VILANTEROL inhaler every day as directed. \n Rinse your mouth with water and spit after each dose to prevent thrush. \n Clean your inhaler once a week, and store at room temperature. \n Tell your pharmacist if you are having trouble using your inhaler correctly. \n Ask your pharmacist for help with quitting smoking. \n Exercise regularly and eat more fruits and vegetables.",
+      "Use your UMECLIDINIUM-VILANTEROL inhaler every day as directed. \n Rinse your mouth with water and spit after each dose to prevent thrush. \n Clean your inhaler once a week, and store at room temperature. \n Tell your pharmacist if you are having trouble using your inhaler correctly.\n Exercise regularly and eat more fruits and vegetables.",
     mapDisplay: false,
     mapOrder: 9
   },
@@ -95,7 +95,7 @@ const mapOutputData = [
     mapDiscuss:
       "GUIDELINE GOALS: symptom control (fewer breathing limitations during daily activities) and reduced number of COPD exacerbations per year. Your _controller_ inhaler improves lung function, reduces COPD symptoms, and reduces exacerbation risk.",
     mapPlan:
-      "Use your _controller_ inhaler every day as directed. \n Rinse your mouth with water and spit after each _controller_ dose to prevent thrush. \n Clean your _controller_ inhaler once a week, and store at room temperature. \n Tell your pharmacist if you are having trouble using your inhaler correctly. \n Immediately report any increased shortness of breath, mucus, or frequent rescue inhaler use. \n Ask your pharmacist for help with quitting smoking.",
+      "Use your _controller_ inhaler every day as directed. \n Rinse your mouth with water and spit after each _controller_ dose to prevent thrush. \n Clean your _controller_ inhaler once a week, and store at room temperature. \n Tell your pharmacist if you are having trouble using your inhaler correctly. \n Immediately report any increased shortness of breath, mucus, or frequent rescue inhaler use.",
     mapDisplay: false,
     mapOrder: 10
   },
@@ -113,9 +113,9 @@ const mapOutputData = [
     mapCategory: "Hyperlipidemia",
     mapCode: "LIPID06031",
     mapDiscuss:
-      "GUIDELINE GOALS (2026 ACC/AHA): LDL <70 mg/dL and Non-HDL cholesterol <100 mg/dL. ATORVASTATIN reduces your cholesterol levels and your risk of heart attack, stroke, and heart disease.",
+      "GUIDELINE GOALS (2026 ACC/AHA): LDL <70 mg/dL and Non-HDL cholesterol <100 mg/dL. {{STATIN}} reduces your cholesterol levels and your risk of heart attack, stroke, and heart disease.",
     mapPlan:
-      "Avoid grapefruit juice. \n Get cholesterol and liver tests as advised. \n Report any muscle pain or dark-colored urine. \n Eat more fruits, vegetables, beans, whole grains, and fiber; choose healthy fats like fish, nuts, olive oil, and avocados. \n Exercise ≥150 minutes weekly. \n Ask your pharmacist for help with quitting smoking.",
+      "Avoid grapefruit juice. \n Get cholesterol and liver tests as advised. \n Report any muscle pain or dark-colored urine. \n Eat more fruits, vegetables, beans, whole grains, and fiber; choose healthy fats like fish, nuts, olive oil, and avocados. \n Exercise ≥150 minutes weekly.",
     mapDisplay: false,
     mapOrder: 12
   },
@@ -125,7 +125,7 @@ const mapOutputData = [
     mapDiscuss:
       "GUIDELINE GOAL: BP <130/80 mmHg. Taking your BP medication(s), making lifestyle changes, and accurately checking your BP allows for greater BP control, which also reduces your risk for developing advanced conditions (eg, heart attack, stroke, kidney failure).",
     mapPlan:
-      "30 minutes before taking your blood pressure, avoid food, caffeine, smoking, and exercise. \n Sit with your back supported for 5 minutes. Wrap your cuff on bare arm, and keep feet flat, legs uncrossed, arm at chest level on a table. Do not talk during the reading. \n Keep a blood pressure log for your appointments. \n Follow the DASH diet, reduce daily sodium (<2,300 mg) and alcohol (1-2 drinks), increase weekly exercise (150 min/week), and practice stress management.",
+      "Avoid food, caffeine, smoking, and exercise for 30 minutes before checking. \n Sit with your back supported for 5 minutes. Wrap your cuff around your arm, keep feet flat, legs uncrossed, arm at chest level on a table. Do not talk during the reading. \n Keep a blood pressure log for your appointments. \n Follow the DASH diet, reduce daily sodium (<2,300 mg) and alcohol (1-2 drinks), increase weekly exercise (150 min/week), and practice stress management.",
     mapDisplay: false,
     mapOrder: 13
   },
@@ -133,7 +133,7 @@ const mapOutputData = [
     mapCategory: "Potassium/Kidney Monitoring",
     mapCode: "HTN06041",
     mapDiscuss:
-      "RECOMMENDED POTASSIUM LEVELS: 3.5-5.0 mEq/L. LOSARTAN can affect your kidney function and potassium levels.",
+      "RECOMMENDED POTASSIUM LEVELS: 3.5-5.0 mEq/L. {{kSparingMed}} can affect your kidney function and potassium levels.",
     mapPlan:
       "Avoid potassium supplements and NSAIDs unless advised. \n Get your potassium and kidney labs checked as advised. \n Stay well hydrated, especially during hot weather, illness, or if vomiting/having diarrhea.",
     mapDisplay: false,
@@ -143,9 +143,9 @@ const mapOutputData = [
     mapCategory: "Diabetes",
     mapCode: "DM06035",
     mapDiscuss:
-      "GUIDELINE GOALS (ADA): A1c <7%. Diabetes can lead to serious complications if blood sugar remains high, including vision loss, kidney damage, and nerve pain.",
+      "GUIDELINE GOALS (ADA): {{GLYCEMIC_GOAL}}. Diabetes can lead to serious complications if blood sugar remains high, including vision loss, kidney damage, and nerve pain.",
     mapPlan:
-      "If you take insulin, use the correct type, dose, and injection technique. Rotate injection sites. \n Record your readings from your FREESTYLE LITE SMBG. \n Schedule your foot exam, eye exam, and labs (A1c, glucose, kidney function). \n Check if you received your FLU, COVID-19, PNEUMONIA, RSV, and HEPATITIS B vaccines. \n Eat healthy foods; limit added sugars, refined carbs, and processed foods. \n Exercise 150 minutes of moderate physical activity per week. \n Check your feet daily for cuts, blisters, redness, or sores. Wear properly fitting shoes. \n Report symptoms of low blood sugar (shakiness, sweating, confusion) or high blood sugar (excessive thirst, frequent urination, blurred vision).",
+      "{{INSULIN_INSTRUCTION}}\nRecord your readings from your {{DEVICE_NAME}} {{DEVICE_TYPE}}. \n Schedule your foot exam, eye exam, and labs (A1c, glucose, kidney function). \n Check if you received your FLU, COVID-19, PNEUMONIA, RSV, and HEPATITIS B vaccines. \n Eat healthy foods; limit added sugars, refined carbs, and processed foods. \n Exercise 150 minutes of moderate physical activity per week. \n Check your feet daily for cuts, blisters, redness, or sores. Wear properly fitting shoes. \n Report symptoms of low blood sugar (shakiness, sweating, confusion) or high blood sugar (excessive thirst, frequent urination, blurred vision).",
     mapDisplay: false,
     mapOrder: 15
   },
@@ -182,7 +182,7 @@ const mapOutputData = [
     mapCategory: "Heart Failure",
     mapCode: "HF06035",
     mapDiscuss: "GUIDELINE GOALS: Blood pressure: <130/80 mmHg. Heart failure means your heart is not pumping as efficiently as it should, causing fluid to build up in your body. Missing doses can lead to rapid worsening.",
-    mapPlan: "Weigh yourself every morning after using the bathroom and before eating and keep a daily weight log. \n Contact your doctor right away if you gain more than 2 lbs in one day or 5 lbs in one week.\n Speak with your doctor if you notice significantly less urination.\n Call your doctor or go to the ER right away if you experience worsening shortness of breath, increased leg/foot swelling, or unusual fatigue.\n Limit sodium to <2,000 mg/day — avoid canned soups, deli meats, fast food, and salty snacks.\n Limit fluid intake as directed. Avoid NSAIDs — these worsen heart failure and cause fluid retention.\n Do not smoke. Limit or avoid alcohol.",
+    mapPlan: "Weigh yourself every morning after using the bathroom and before eating and keep a daily weight log. \n Contact your doctor right away if you gain more than 2 lbs in one day or 5 lbs in one week.\n Speak with your doctor if you notice significantly less urination.\n Call your doctor or go to the ER right away if you experience worsening shortness of breath, increased leg/foot swelling, or unusual fatigue.\n Limit sodium to <2,000 mg/day — avoid canned soups, deli meats, fast food, and salty snacks.\n Limit fluid intake as directed. Avoid NSAIDs — these worsen heart failure and cause fluid retention.\nLimit or avoid alcohol.",
     mapDisplay: false,
     mapOrder: 19
   },
@@ -197,7 +197,7 @@ const mapOutputData = [
   {
     mapCategory: "DDI: Serotonin Syndrome",
     mapCode: "",
-    mapDiscuss: "You take [DRUG A] with [DRUG B], which together increase serotonin levels in the body. When combined, this can raise the risk of a rare but serious condition called serotonin syndrome.",
+    mapDiscuss: "You take {{SEROSYN_A}} with {{SEROSYN_B}}, which increase serotonin levels in the body. When combined, this can raise the risk of a rare but serious condition called serotonin syndrome.",
     mapPlan: "Do not stop, change, or take any new medications without first checking with your pharmacist or doctor. \n Seek emergency care immediately if you experience: agitation, confusion, rapid heart rate, high blood pressure, dilated pupils, muscle twitching or rigidity, heavy sweating, diarrhea, or fever. Call 911 or go to the nearest ER right away.\n Make sure all of your healthcare providers know about every medication you take.",
     mapDisplay: false,
     mapOrder: 21
@@ -205,7 +205,7 @@ const mapOutputData = [
   {
     mapCategory: "DDI: Bleeding Risk",
     mapCode: "ANT06053",
-    mapDiscuss: "You take _DrugA_  and _DrugB_ , which may increase your risk for bleeding.",
+    mapDiscuss: "You take {{BLEED_A}} and {{BLEED_B}}, which may increase your risk for bleeding.",
     mapPlan: "Do not start, change, or stop any medications without first checking with your pharmacist. \n Tell all of your healthcare providers and your dentist about all of your medications before any procedure or surgery.\n Watch for signs of unusual bleeding: cuts that take longer to stop, unexplained bruising, pink/dark urine, red/black tarry stools, coughing/vomiting blood, or a severe/unusual headache. If you experience any of these, contact your doctor right away or call 911.",
     mapDisplay: false,
     mapOrder: 22
@@ -213,17 +213,33 @@ const mapOutputData = [
   {
     mapCategory: "DDI: Clopidogrel w/PPI",
     mapCode: "ANT06053",
-    mapDiscuss: "You are taking CLOPIDOGREL with _PPI_; which can reduce how well CLOPIDOGREL works to prevent blood clots, potentially increasing your risk of heart attack or stroke.",
+    mapDiscuss: "You are taking CLOPIDOGREL with {{PPI}}; which can reduce how well CLOPIDOGREL works to prevent blood clots, potentially increasing your risk of heart attack or stroke.",
     mapPlan: "Do not stop CLOPIDOGREL without talking to your doctor first, as this medication helps prevent heart attacks and stroke. \n Speak with your doctor about whether _PPI_ can be switched to PANTOPRAZOLE, which has the lowest risk of interacting with clopidogrel. \n Contact your doctor right away if you experience chest pain, sudden shortness of breath, or symptoms of a stroke.",
     mapDisplay: false,
     mapOrder: 23
   },
   {
-    mapCategory: "",
-    mapCode: "",
-    mapDiscuss: "You take _DrugA_ with _DrugB_ , which may increase your risk for respiratory depression, which results in slow, shallow breathing. This serious interaction requires caution.",
+    mapCategory: "DDI: Respiratory Depression",
+    mapCode: "DI05041",
+    mapDiscuss: "You take {{respDepA}} with {{respDepB}}, which may increase your risk for respiratory depression, which results in slow, shallow breathing. This serious interaction requires caution.",
     mapPlan: "If you or someone around you notices you show respiratory depression, call 911 immediately. \n Take this medicine exactly as directed — do not take more than prescribed. \n Do not drink alcohol. \n Do not drive or operate heavy machinery until you know how these medications affect you.",
     mapDisplay: false,
     mapOrder: 24
+  },
+  {
+    mapCategory: "DDI: CNS Depression",
+    mapCode: "DI05041",
+    mapDiscuss: "You take {{cnsDepA}} with {{cnsDepB}}, which may increase your risk for CNS depression. This serious interaction requires caution.",
+    mapPlan: "Take this medicine exactly as directed — do not take more than prescribed. \n Do not drink alcohol. \n Do not drive or operate heavy machinery until you know how these medications affect you.",
+    mapDisplay: false,
+    mapOrder: 25
+  },
+  {
+    mapCategory: "Smoking Cessation",
+    mapCode: "GEN0001",
+    mapDiscuss: "Discussed tobacco use history, health risks, and strategies/resources for smoking cessation.",
+    mapPlan: "Set a quit date and share it with family or friends for support.\nConsider over-the-counter Nicotine Replacement Therapy (patches, gum, or lozenges) or discuss prescription options with your doctor.\nCall 1-800-QUIT-NOW for free coaching and resources.",
+    mapDisplay: false,
+    mapOrder: 100
   }
 ];
