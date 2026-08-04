@@ -1,4 +1,4 @@
-const lookupMed = [
+const section2drug = [
     {
 	    "name": "ACETAMINOPHEN",
         "class_code": "",
@@ -44,6 +44,17 @@ const lookupMed = [
         "cns_risk": false
     },
     {
+        "name": "ALENDRONATE",
+        "class_code": "BISPHOSPHONATE",
+        "class_label": "Bisphosphonate",
+        "beers_know": "",
+        "beers_do": "",
+        "serotonin_risk": false,
+        "bleeding_risk": false,
+        "resp_risk": false,
+        "cns_risk": false
+    },
+    {
 	    "name": "ALPRAZOLAM",
         "class_code": "BENZO",
         "class_label": "Benzodiazepine",
@@ -66,7 +77,7 @@ const lookupMed = [
     },
     {
 	    "name": "AMITRIPTYLINE HCL",
-        "class_code":         "beers_TCA",
+        "class_code": "TCA",
         "class_label": "⚠️ Beers: TCA",
         "beers_know": "AMITRIPTYLINE should be avoided. \nIn older adults, AMITRIPTYLINE use has been reported with increasing risks of dementia, delirium, falls, and urinary or GI complications.",
         "beers_do": "Speak with your doctor about stopping AMITRIPTYLINE and choosing another medication to treat your condition(s).",
@@ -153,7 +164,7 @@ const lookupMed = [
         "cns_risk": false
     },
     {
-	    "name": "ATORVASTATIN CALCIUM",
+	    "name": "ATORVASTATIN",
         "class_code": "STATIN",
         "class_label": "Statin",
         "beers_know": "",
@@ -374,7 +385,7 @@ const lookupMed = [
     },
     {
 	    "name": "CLONIDINE HCL",
-        "class_code":         "beers_cALPHA",
+        "class_code": "beers_cALPHA",
         "class_label": "⚠️ Beers: Central Alpha Agonist",
         "beers_know": "CLONIDINE is not recommended in older adults because the medication puts patients at a higher risk CNS adverse events and orthostatic hypotension.",
         "beers_do": "Speak with your doctor about stopping CLONIDINE and adjusting your blood pressure medications.",
@@ -408,7 +419,7 @@ const lookupMed = [
     {
 	    "name": "DABIGATRAN",
         "class_code": "ANTICOAGULANT",
-        "class_label": "Anticoagulant (Warfarin/DOAC)",
+        "class_label": "DOAC",
         "beers_know": "",
         "beers_do": "",
         "serotonin_risk": false,
@@ -550,7 +561,7 @@ const lookupMed = [
     },
     {
 	    "name": "ESZOPICLONE",
-        "class_code": "Z-HYPNO",
+        "class_code": "ZHYPNO",
         "class_label": "⚠️ Beers: Z-Hypnotic",
         "beers_know": "ESZOPICLONE should be avoided in older adults.\nESZOPICLONE exerts little improvement in sleep quality and duration, while increasing the risk for delirium, falls, fractures, increased emergency room visits/hospitalizations, and/or motor vehicle crashes.",
         "beers_do": "Speak with your doctor about tapering you off ESZOPICLONE and choosing another medication to treat your condition(s).",
@@ -682,9 +693,9 @@ const lookupMed = [
     },
     {
 	    "name": "HYDROCODONE/ACETAMINOPHEN",
-        "class_code": "",
-        "class_label": "OPIOID",
-        "beers_know": "Opioid",
+        "class_code": "OPIOID",
+        "class_label": "Opioid",
+        "beers_know": "",
         "beers_do": "",
         "serotonin_risk": false,
         "bleeding_risk": false,
@@ -704,7 +715,7 @@ const lookupMed = [
     },
     {
 	    "name": "INSULIN ASPART (NOVOLOG FLEXPEN)",
-        "class_code": "Insulin",
+        "class_code": "INSULIN",
         "class_label": "Insulin",
         "beers_know": "",
         "beers_do": "",
@@ -715,7 +726,7 @@ const lookupMed = [
     },
     {
 	    "name": "INSULIN GLARGINE",
-        "class_code": "Insulin",
+        "class_code": "INSULIN",
         "class_label": "Insulin",
         "beers_know": "",
         "beers_do": "",
@@ -726,7 +737,7 @@ const lookupMed = [
     },
     {
 	    "name": "INSULIN LISPRO (ADMELOG SOLOSTAR)",
-        "class_code": "Insulin",
+        "class_code": "INSULIN",
         "class_label": "Insulin",
         "beers_know": "",
         "beers_do": "",
@@ -737,7 +748,7 @@ const lookupMed = [
     },
     {
 	    "name": "INSULIN REGULAR (HUMULIN R)",
-        "class_code": "Insulin",
+        "class_code": "INSULIN",
         "class_label": "Insulin",
         "beers_know": "",
         "beers_do": "",
@@ -1231,7 +1242,7 @@ const lookupMed = [
         "cns_risk": false
     },
     {
-	    "name": "PRAVASTATIN SODIUM",
+	    "name": "PRAVASTATIN",
         "class_code": "STATIN",
         "class_label": "Statin",
         "beers_know": "",
@@ -1420,6 +1431,17 @@ const lookupMed = [
 	    "name": "SITAGLIPTIN PHOSPHATE‑METFORMIN HCL (JANUMET)",
         "class_code": "DPP4",
         "class_label": "DPP-4 Inhibitor",
+        "beers_know": "",
+        "beers_do": "",
+        "serotonin_risk": false,
+        "bleeding_risk": false,
+        "resp_risk": false,
+        "cns_risk": false
+    },
+    {
+        "name": "SPIRONOLACTONE",
+        "class_code": "K_SPARING",
+        "class_label": "Potassium-sparing diuretic",
         "beers_know": "",
         "beers_do": "",
         "serotonin_risk": false,
@@ -1668,13 +1690,5 @@ const lookupMed = [
         "bleeding_risk": true,
         "resp_risk": false,
         "cns_risk": false
-    }
-];
-const lookupCon = [
-    {
-        "name": "High Blood Pressure"
-    },
-    {
-        "name": "Diabetes"
     }
 ];
