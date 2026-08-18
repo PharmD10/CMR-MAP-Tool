@@ -162,7 +162,7 @@ function getBleedingRiskMeds(activeMeds, medsByClass) {
   return detectedBleedingMeds;
 }
 
-// RESPIRATORY DEPRESSION
+// RESPIRATORY DEPRESSION HELPER
 function getRespDepMeds(activeMeds, medsByClass) {
   let detectedRespDepMeds = [];
   const respDepClasses = ["OPIOID", "BENZO", "MUSCLE_RELAXANT", "GABAPENTINOID"];
@@ -217,6 +217,7 @@ function getRespDepMeds(activeMeds, medsByClass) {
   return detectedRespDepMeds;
 }
 
+// CNS DEPRESSION HELPER
 function getCnsDepMeds(activeMeds, medsByClass) {
   let detectedCnsDepMeds = [];
   const cnsDepClasses = ["OPIOID", "BENZO", "MUSCLE_RELAXANT", "GABAPENTINOID", "SSRI", "SNRI", "TRAZODONE", "TCA", "ZHYPNO"];
@@ -231,7 +232,7 @@ function getCnsDepMeds(activeMeds, medsByClass) {
       let isClassMatch = false;
 
       if (typeof med === 'object' && med !== null) {
-        isFlagged = med.resp_risk === true;
+        isFlagged = med.cns_risk === true || med.resp_risk === true;
         const code = (med.class_code || med.classCode || "").toUpperCase().trim();
         isClassMatch = cnsDepClasses.includes(code);
       }
@@ -439,7 +440,7 @@ function applyMedicationReplacements(discussText, planText) {
   // CNS DEPRESSION RISK REPLACEMENTS
   const detectedCnsDepMeds = getCnsDepMeds(activeMeds, medsByClass);
 
-  if (detectedRespDepMeds.length >= 2) {
+  if (detectedCnsDepMeds.length >= 2) {
     const cnsDepA = detectedCnsDepMeds[0];
     const cnsDepB = detectedCnsDepMeds.slice(1).join(" and ");
 
@@ -831,36 +832,32 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${matchedData.mapCategory} <span class="cmr-table-wrapper-code">(${matchedData.mapCode})</span>
               </h3>
               <button type="button" class="copy-btn" onclick="copyTableToClipboard('${tableId}')">
-                📋 Copy Text
+                Copy
               </button>
             </div>
-
-            <table id="${tableId}" class="cmr-generated-table">
+            <table class="cmr-output-table" id="${tableId}">
+              <thead>
+                <tr>
+                  <th>What we discussed</th>
+                  <th>What you can do</th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
-                  <th>What did I discuss with the patient / Goal?</th>
-                  <td class="copyable-discuss">${discussText}</td>
-                </tr>
-                <tr>
-                  <th>What action does the patient need to take?</th>
-                  <td class="copyable-plan">
-                    <ul>${planItems}</ul>
+                  <td class="discuss-cell">${discussText}</td>
+                  <td class="plan-cell">
+                    <ul>
+                      ${planItems}
+                    </ul>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
         `;
-      } else {
-        outputHTML += `
-          <div class="cmr-table-wrapper">
-            <h3>${categoryName}</h3>
-            <p><em>No matching guidelines found in mapData.js.</em></p>
-          </div>
-        `;
       }
     });
 
-    ptContainer.innerHTML = outputHTML;
+    ptContainer.innerHTML = outputHTML || "<p><em>No conditions selected.</em></p>";
   });
 });
