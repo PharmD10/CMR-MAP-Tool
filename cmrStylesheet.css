@@ -5,21 +5,189 @@
 
 body {
   font-family: Tahoma, Verdana, sans-serif;
-}
-
-section {
   background-color: lightblue;
-  opacity: 0.8;
+  opacity: 1;
 }
 
-h2 {
+main, h1 {
   text-align: center;
+}
+section {
+  background-color: lightcoral;
+  opacity: 0.8;
+  padding: 10px;
+  margin: 10px;
 }
 
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
   width: 100%;
+}
+/* ==========================================
+   SECTION 1 GRID
+   ========================================== */
+.sec1-box {
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.pt-info-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.age-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0px 87px 78px -39px rgba(0,0,0,0.4);
+  width: 10%;
+}
+
+.age-quest {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#ptage{
+  width: 50%;
+  font-size: 2rem;
+  overflow: hidden;
+  margin: 10px;
+  text-align: center;
+}
+#ptage::-webkit-outer-spin-button,
+#ptage::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0px;
+}
+/* ==========================================
+   SMOKING GRID
+   ========================================== */
+.smoke-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0px 87px 78px -39px rgba(0,0,0,0.4);
+  width: 10%;
+}
+.smoke-quest {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.smoke-choice {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.smoke-container input {
+  display: none;
+}
+
+.smoke-container label {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid blue;
+  color: #000;
+  transition: .3s ease;
+  height: 50px;
+  width: 150px;
+}
+
+.smoke-hist {
+  color: rgb(49, 49, 49);
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 800;
+}
+
+.smoke-choice  label:hover {
+  background-color: rgba(24, 24, 24, 0.13);
+  border: 1px solid #bbb;
+}
+
+.smoke-choice input:checked + label {
+  border-color: red;
+  color: red;
+}
+/* ==========================================
+   VACCINE GRID
+   ========================================== */
+
+.vax-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0px 87px 78px -39px rgba(0,0,0,0.4);
+  width: 75%;
+}
+
+.vax-btn-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.vax-btn {
+  display: none; 
+}
+
+.vax-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: red;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  border: 10px solid red;
+  border-radius: 25%;
+  height: 100px;
+  width: 125px;
+  margin: 4px;
+}
+
+.vax-btn:checked + .vax-label {
+  background-color: limegreen;
+  border: none;
+  color: white;
 }
 
 /* ==========================================
@@ -40,18 +208,18 @@ table {
 
 .section-column table {
   width: 100%;
+
 }
 
 /* Sync row heights across Section 2 and Section 3 */
-.section-column table td,
-.section-column table th {
-  height: 32px;
+.section-column table td, .section-column table th {
   vertical-align: middle;
+  height: 48px;
 }
 
 .section-column select {
   width: 100%;
-  height: 28px;
+  height: 36px;
 }
 
 /* ==========================================
@@ -60,31 +228,93 @@ table {
 .condition-input {
   width: 100%;
   height: 28px;
-  padding: 4px;
 }
 
 .table-cell-center {
   text-align: center;
 }
 
-/* ==========================================
-   SECTION 4: VACCINE GRID
-   ========================================== */
-.vaccine-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 40px;
-  margin-top: 10px;
+/* Apply identical height, padding, and box-sizing to both Section 2 and Section 3 inputs */
+.medication-cell,
+.condition-cell,
+.condition-input,
+section select,
+section input[type="text"] {
+  box-sizing: border-box; /* Crucial for equal total height calculation */
+  height: 38px;           /* Set identical height */
+  padding: 6px 10px;      /* Set identical vertical & horizontal padding */
+  font-size: 14px;        /* Match text size */
+  line-height: 1.2;
 }
 
-.vaccine-item {
+/* ==========================================
+   GENERATE CMR BUTTON
+   ========================================== */
+#cmr-btn-container {
   display: flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-  border: blue solid;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#submitBtn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #4f4f4f;
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+}
+
+#submitBtn:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+#submitBtn:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #39bda7;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+#submitBtn:hover {
+  color: #ffffff;
+  border: 1px solid #39bda7;
+}
+
+#submitBtn:hover:before {
+  top: -35%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+#submitBtn:hover:after {
+  top: -45%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 /* ==========================================
@@ -93,6 +323,8 @@ table {
 .cmr-table-wrapper {
   margin-bottom: 30px;
   border: black solid;
+  background-color: lightgoldenrodyellow;
+  border-radius: 10px;
 }
 
 .cmr-table-wrapper-header {
@@ -124,7 +356,6 @@ table {
 }
 
 .cmr-generated-table th {
-  background-color: #f2f2f2;
   padding: 8px;
   width: 25%;
   vertical-align: top;
