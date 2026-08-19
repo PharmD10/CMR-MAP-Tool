@@ -1,6 +1,6 @@
-// section5.js - Section 5 Diabetic Testing Device Logic
+// section5.js - Section 4 Diabetic Testing Device Logic
 
-// Check if "Diabetes" is in Section 3 and toggle Section 5 state
+// Check if "Diabetes" is in Section 3 and toggle Section 4 state
 function checkDiabetesPresence() {
   const conditionsTable = document.getElementById("conditionsTableBody");
   const section5Fieldset = document.getElementById("section5Fieldset");
