@@ -1395,6 +1395,17 @@ const section2drug = [
         "cns_risk": false
     },
     {
+	    "name": "SACUBITRIL/VALSARTAN (ENTRESTO)",
+        "class_code": "ARB",
+        "class_label": "ARNI/ARB",
+        "beers_know": "",
+        "beers_do": "",
+        "serotonin_risk": false,
+        "bleeding_risk": false,
+        "resp_risk": false,
+        "cns_risk": false
+    },
+    {
 	    "name": "SERTRALINE",
         "class_code": "SSRI",
         "class_label": "SSRI",
