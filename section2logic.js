@@ -1,12 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tableBody = document.getElementById('medicationsTableBody');
 
-    // 1. Build options HTML from lookupMed once
-    const medicationOptionsHtml = lookupMed
+    // 1. Sort section2drug array alphabetically by drug name (A-Z)
+    const sortedDrugs = [...section2drug].sort((a, b) => 
+        a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+    );
+
+    // 2. Build options HTML from sorted list
+    const medicationOptionsHtml = sortedDrugs
         .map(item => `<option value="${item.name}">${item.name}</option>`)
         .join('');
 
-    // 2. Generate the 25 rows dynamically
+    // Generate the 25 rows
     let rowsHtml = '';
     for (let i = 1; i <= 25; i++) {
         rowsHtml += `
@@ -36,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            const matchedDrug = lookupMed.find(item => item.name && item.name.toUpperCase() === selectedName.toUpperCase());
+            const matchedDrug = section2drug.find(item => item.name && item.name.toUpperCase() === selectedName.toUpperCase());
 
             if (matchedDrug) {
                 targetClassCell.innerText = matchedDrug.class_label;
@@ -46,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. Paste event listener
+    //Copy/Paste event listener
     document.addEventListener('paste', (event) => {
         const clipboardData = (event.clipboardData || window.clipboardData).getData('text');
         if (!clipboardData) return;
@@ -73,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const select = selects[targetIndex];
                 const targetUpper = pastedName.toUpperCase();
 
-                // Look for an exact case-insensitive match in lookupMed/options
+                // Look for an exact case-insensitive match in section2drug/options
                 let matchingOption = Array.from(select.options).find(
                     opt => opt.value.toUpperCase() === targetUpper
                 );
@@ -94,3 +99,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// Helper to extract active medications and group them by class_code
+function getActiveMedicationData() {
+  const selectedMeds = [];
+  const medSelects = document.querySelectorAll(".medication-select");
+
+  medSelects.forEach(select => {
+    const val = select.value ? select.value.trim() : "";
+    if (val && !val.includes("-- Select Medication --")) {
+      selectedMeds.push(val);
+    }
+  });
+
+  const drugList = window.section2drug || (typeof section2drug !== "undefined" ? section2drug : []);
+
+  // Map selected drug names back to their full objects in section2drug
+  const matchedMedObjects = selectedMeds
+    .map(drugName => drugList.find(item => item.name && item.name.toUpperCase() === drugName.toUpperCase()))
+    .filter(Boolean);
+
+  // Group active drug names by class_code
+  const medsByClass = {};
+  matchedMedObjects.forEach(item => {
+    if (item.class_code) {
+      if (!medsByClass[item.class_code]) {
+        medsByClass[item.class_code] = [];
+      }
+      medsByClass[item.class_code].push(item.name);
+    }
+  });
+
+  return {
+    selectedMeds,
+    matchedMedObjects,
+    medsByClass
+  };
+}
