@@ -53,9 +53,9 @@ const mapOutputData = [
     mapCategory: "Osteoarthritis",
     mapCode: "ARTH06031",
     mapDiscuss:
-      "MELOXICAM reduces joint inflammation and pain, which may prevent long-term joint damage.",
+      "{{NSAID}} reduces joint inflammation and pain, which may prevent long-term joint damage.",
     mapPlan:
-      "Take MELOXICAM with food to reduce acid reflux. \n Report worsening joint pain, swelling, redness, or new symptoms. \n Maintain joint health with gentle movement and exercise.",
+      "Take {{NSAID}} with food to reduce acid reflux. \n Report worsening joint pain, swelling, redness, or new symptoms. \n Maintain joint health with gentle movement and exercise.",
     mapDisplay: false,
     mapOrder: 6
   },
@@ -85,7 +85,7 @@ const mapOutputData = [
     mapDiscuss:
       "GUIDELINE GOALS: ≤2 days per week of daytime symptoms or rescue inhaler use; no sleep disturbance due to asthma; unrestricted physical activity.",
     mapPlan:
-      "Use your UMECLIDINIUM-VILANTEROL inhaler every day as directed. \n Rinse your mouth with water and spit after each dose to prevent thrush. \n Clean your inhaler once a week, and store at room temperature. \n Tell your pharmacist if you are having trouble using your inhaler correctly.\n Exercise regularly and eat more fruits and vegetables.",
+      "Use your {{LABA}} inhaler every day as directed. \n Rinse your mouth with water and spit after each dose to prevent thrush. \n Clean your inhaler once a week, and store at room temperature. \n Tell your pharmacist if you are having trouble using your inhaler correctly.\n Exercise regularly and eat more fruits and vegetables.",
     mapDisplay: false,
     mapOrder: 9
   },
@@ -95,7 +95,7 @@ const mapOutputData = [
     mapDiscuss:
       "GUIDELINE GOALS: symptom control (fewer breathing limitations during daily activities) and reduced number of COPD exacerbations per year. Your _controller_ inhaler improves lung function, reduces COPD symptoms, and reduces exacerbation risk.",
     mapPlan:
-      "Use your _controller_ inhaler every day as directed. \n Rinse your mouth with water and spit after each _controller_ dose to prevent thrush. \n Clean your _controller_ inhaler once a week, and store at room temperature. \n Tell your pharmacist if you are having trouble using your inhaler correctly. \n Immediately report any increased shortness of breath, mucus, or frequent rescue inhaler use.",
+      "Use your {{LABA}} every day as directed. \n Rinse your mouth with water and spit after each _controller_ dose to prevent thrush. \n Clean your _controller_ inhaler once a week, and store at room temperature. \n Tell your pharmacist if you are having trouble using your inhaler correctly. \n Immediately report any increased shortness of breath, mucus, or frequent rescue inhaler use.",
     mapDisplay: false,
     mapOrder: 10
   },
@@ -204,7 +204,7 @@ const mapOutputData = [
   },
   {
     mapCategory: "DDI: Bleeding Risk",
-    mapCode: "ANT06053",
+    mapCode: "ANT06033",
     mapDiscuss: "You take {{BLEED_A}} and {{BLEED_B}}, which may increase your risk for bleeding.",
     mapPlan: "Do not start, change, or stop any medications without first checking with your pharmacist. \n Tell all of your healthcare providers and your dentist about all of your medications before any procedure or surgery.\n Watch for signs of unusual bleeding: cuts that take longer to stop, unexplained bruising, pink/dark urine, red/black tarry stools, coughing/vomiting blood, or a severe/unusual headache. If you experience any of these, contact your doctor right away or call 911.",
     mapDisplay: false,
