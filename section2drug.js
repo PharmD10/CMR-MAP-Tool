@@ -65,7 +65,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "AMIODARONE HCL",
+	    "name": "AMIODARONE",
         "class_code": "ANTIARRHYTMIC",
         "class_label": "Antiarrhytmic",
         "beers_know": "",
@@ -76,7 +76,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "AMITRIPTYLINE HCL",
+	    "name": "AMITRIPTYLINE",
         "class_code": "TCA",
         "class_label": "⚠️ Beers: TCA",
         "beers_know": "AMITRIPTYLINE should be avoided. \nIn older adults, AMITRIPTYLINE use has been reported with increasing risks of dementia, delirium, falls, and urinary or GI complications.",
@@ -98,7 +98,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "AMLODIPINE BESYLATE-BENAZEPRIL",
+	    "name": "AMLODIPINE/BENAZEPRIL",
         "class_code": "CCB-ACEI",
         "class_label": "CCB/ACE Inhibitor",
         "beers_know": "",
@@ -120,7 +120,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "AMOXICILLIN & POTASSIUM CLAVULANATE",
+	    "name": "AMOXICILLIN/CLAVULANATE",
         "class_code": "PCN",
         "class_label": "Penicillin",
         "beers_know": "",
@@ -131,7 +131,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "AMPHETAMINE‑DEXTROAMPHETAMINE",
+	    "name": "AMPHETAMINE/DEXTROAMPHETAMINE (ADDERALL)",
         "class_code": "",
         "class_label": "",
         "beers_know": "",
@@ -186,7 +186,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "BENZTROPINE MESYLATE",
+	    "name": "BENZTROPINE",
         "class_code": "",
         "class_label": "",
         "beers_know": "",
@@ -219,7 +219,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "BUDESONIDE‑GLYCOPYRROLATE‑FORMOTEROL FUMARATE (BREZTRI AEROSPHERE)",
+	    "name": "BREZTRI",
         "class_code": "LABA",
         "class_label": "LABA-Containing Inhaler",
         "beers_know": "",
@@ -241,7 +241,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "BUPRENORPHINE HCL‑NALOXONE HCL DIHYDRATE",
+	    "name": "BUPRENORPHINE/NALOXONE",
         "class_code": "OPIOID",
         "class_label": "Opioid",
         "beers_know": "",
@@ -252,7 +252,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "BUPROPION HCL",
+	    "name": "BUPROPION",
         "class_code": "BUPROPION",
         "class_label": "Bupropion (Serotonin Risk)",
         "beers_know": "",
@@ -329,6 +329,17 @@ const section2drug = [
         "cns_risk": false
     },
     {
+        "name": "CHOLESTYRAMINE",
+        "class_code": "",
+        "class_label": "",
+        "beers_know": "",
+        "beers_do": "",
+        "serotonin_risk": false,
+        "bleeding_risk": false,
+        "resp_risk": false,
+        "cns_risk": false
+    },
+    {
 	    "name": "CHLORHEXIDINE GLUCONATE",
         "class_code": "",
         "class_label": "",
@@ -362,7 +373,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "CLINDAMYCIN HCL",
+	    "name": "CLINDAMYCIN",
         "class_code": "",
         "class_label": "",
         "beers_know": "",
@@ -384,7 +395,7 @@ const section2drug = [
         "cns_risk": true
     },
     {
-	    "name": "CLONIDINE HCL",
+	    "name": "CLONIDINE",
         "class_code": "beers_cALPHA",
         "class_label": "⚠️ Beers: Central Alpha Agonist",
         "beers_know": "CLONIDINE is not recommended in older adults because the medication puts patients at a higher risk CNS adverse events and orthostatic hypotension.",
@@ -472,7 +483,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "DILTIAZEM HCL",
+	    "name": "DILTIAZEM",
         "class_code": "CCB",
         "class_label": "",
         "beers_know": "",
@@ -615,7 +626,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "FLUTICASONE‑UMECLIDINIUM‑VILANTEROL (TRELEGY ELLIPTA)",
+	    "name": "TRELEGY ELLIPTA",
         "class_code": "LABA",
         "class_label": "LABA-Containing Inhaler",
         "beers_know": "",
@@ -626,7 +637,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "Fluticasone–Salmeterol",
+	    "name": "FLUTICASONE/SALMETEROL",
         "class_code": "LABA",
         "class_label": "LABA-Containing Inhaler",
         "beers_know": "",
@@ -659,8 +670,19 @@ const section2drug = [
         "cns_risk": true
     },
     {
+        "name": "GEMTESA",
+        "class_code": "",
+        "class_label": "",
+        "beers_know": "",
+        "beers_do": "",
+        "serotonin_risk": false,
+        "bleeding_risk": false,
+        "resp_risk": false,
+        "cns_risk": false
+    },
+    {
 	    "name": "GLIMEPIRIDE",
-        "class_code":         "beers_SULFONYLUREA",
+        "class_code": "beers_SULFONYLUREA",
         "class_label": "⚠️ Beers: Sulfonylurea",
         "beers_know": "",
         "beers_do": "",
@@ -671,7 +693,7 @@ const section2drug = [
     },
     {
 	    "name": "GLIPIZIDE",
-        "class_code":         "beers_SULFONYLUREA",
+        "class_code": "beers_SULFONYLUREA",
         "class_label": "⚠️ Beers: Sulfonylurea",
         "beers_know": "",
         "beers_do": "",
@@ -835,7 +857,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "LEVOTHYROXINE SODIUM",
+	    "name": "LEVOTHYROXINE",
         "class_code": "LEVOTHYROXINE",
         "class_label": "Levothyroxine",
         "beers_know": "",
@@ -846,7 +868,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "LINAGLIPTIN‑METFORMIN",
+	    "name": "LINAGLIPTIN/METFORMIN",
         "class_code": "DPP4",
         "class_label": "DPP-4 Inhibitor",
         "beers_know": "",
@@ -857,7 +879,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "LISDEXAMFETAMINE DIMESYLATE",
+	    "name": "LISDEXAMFETAMINE (VYVANSE)",
         "class_code": "",
         "class_label": "",
         "beers_know": "",
@@ -879,7 +901,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "LISINOPRIL & HYDROCHLOROTHIAZIDE",
+	    "name": "LISINOPRIL/HYDROCHLOROTHIAZIDE",
         "class_code": "ACEI",
         "class_label": "ACE Inhibitor",
         "beers_know": "",
@@ -923,7 +945,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "LOSARTAN POTASSIUM & HYDROCHLOROTHIAZIDE",
+	    "name": "LOSARTAN/HYDROCHLOROTHIAZIDE",
         "class_code": "ARB",
         "class_label": "ARB",
         "beers_know": "",
@@ -956,13 +978,13 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "MELOXICAM",
+	    "name": "NAPROXEN",
         "class_code": "NSAID",
         "class_label": "NSAID",
         "beers_know": "",
         "beers_do": "",
         "serotonin_risk": false,
-        "bleeding_risk": false,
+        "bleeding_risk": true,
         "resp_risk": false,
         "cns_risk": false
     },
@@ -976,6 +998,17 @@ const section2drug = [
         "bleeding_risk": false,
         "resp_risk": true,
         "cns_risk": true
+    },
+    {
+        "name": "METHENAMINE HIPPURATE",
+        "class_code": "",
+        "class_label": "",
+        "beers_know": "",
+        "beers_do": "",
+        "serotonin_risk": false,
+        "bleeding_risk": false,
+        "resp_risk": false,
+        "cns_risk": false
     },
     {
 	    "name": "METFORMIN",
@@ -1022,7 +1055,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "MONTELUKAST SODIUM",
+	    "name": "MONTELUKAST",
         "class_code": "",
         "class_label": "",
         "beers_know": "",
@@ -1047,28 +1080,6 @@ const section2drug = [
 	    "name": "MOUNJARO",
         "class_code": "GLP-1",
         "class_label": "GLP-1",
-        "beers_know": "",
-        "beers_do": "",
-        "serotonin_risk": false,
-        "bleeding_risk": false,
-        "resp_risk": false,
-        "cns_risk": false
-    },
-    {
-	    "name": "MULTIPLE VITAMINS W/ MINERALS (CENTRUM SILVER) ",
-        "class_code": "SUPPLEMENT",
-        "class_label": "Supplement",
-        "beers_know": "",
-        "beers_do": "",
-        "serotonin_risk": false,
-        "bleeding_risk": false,
-        "resp_risk": false,
-        "cns_risk": false
-    },
-    {
-	    "name": "MULTIPLE VITAMINS WITH MINERALS",
-        "class_code": "SUPPLEMENT",
-        "class_label": "Supplement",
         "beers_know": "",
         "beers_do": "",
         "serotonin_risk": false,
@@ -1111,7 +1122,7 @@ const section2drug = [
     },
     {
 	    "name": "NORTRIPTYLINE",
-        "class_code":         "beers_TCA",
+        "class_code": "beers_TCA",
         "class_label": "⚠️ Beers: TCA",
         "beers_know": "NORTRIPTYLINE should be avoided. \nIn older adults, NORTRIPTYLINE use has been reported with increasing risks of dementia, delirium, falls, and urinary or GI complications.",
         "beers_do": "Speak with your doctor about stopping NORTRIPTYLINE and choosing another medication to treat your condition(s).",
@@ -1121,7 +1132,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "OLMESARTAN MEDOXOMIL",
+	    "name": "OLMESARTAN",
         "class_code": "ARB",
         "class_label": "ARB",
         "beers_know": "",
@@ -1144,6 +1155,28 @@ const section2drug = [
     },
     {
 	    "name": "ONDANSETRON",
+        "class_code": "",
+        "class_label": "",
+        "beers_know": "",
+        "beers_do": "",
+        "serotonin_risk": false,
+        "bleeding_risk": false,
+        "resp_risk": false,
+        "cns_risk": false
+    },
+    {
+        "name": "OXYBUTYNIN",
+        "class_code": "",
+        "class_label": "",
+        "beers_know": "",
+        "beers_do": "",
+        "serotonin_risk": false,
+        "bleeding_risk": false,
+        "resp_risk": false,
+        "cns_risk": false
+    },
+    {
+        "name": "OXERVATE",
         "class_code": "",
         "class_label": "",
         "beers_know": "",
@@ -1187,7 +1220,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "PANTOPRAZOLE SODIUM",
+	    "name": "PANTOPRAZOLE",
         "class_code": "PPI_PANTO",
         "class_label": "PPI — Pantoprazole ✓",
         "beers_know": "",
@@ -1209,7 +1242,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "PIOGLITAZONE HCL",
+	    "name": "PIOGLITAZONE",
         "class_code": "",
         "class_label": "",
         "beers_know": "",
@@ -1231,7 +1264,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "PRAMIPEXOLE DIHYDROCHLORIDE",
+	    "name": "PRAMIPEXOLE",
         "class_code": "",
         "class_label": "",
         "beers_know": "",
@@ -1297,7 +1330,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "PROMETHAZINE HCL",
+	    "name": "PROMETHAZINE",
         "class_code": "",
         "class_label": "",
         "beers_know": "",
@@ -1395,7 +1428,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "SACUBITRIL/VALSARTAN (ENTRESTO)",
+        "name": "SACUBITRIL/VALSARTAN",
         "class_code": "ARB",
         "class_label": "ARNI/ARB",
         "beers_know": "",
@@ -1439,7 +1472,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "SITAGLIPTIN PHOSPHATE‑METFORMIN HCL (JANUMET)",
+	    "name": "SITAGLIPTIN/METFORMIN (JANUMET)",
         "class_code": "DPP4",
         "class_label": "DPP-4 Inhibitor",
         "beers_know": "",
@@ -1505,7 +1538,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "TAMSULOSIN HCL",
+	    "name": "TAMSULOSIN",
         "class_code": "TAMSULOSIN",
         "class_label": "Tamsulosin/Alpha-Blocker",
         "beers_know": "",
@@ -1571,7 +1604,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "UMECLIDINIUM-VILANTEROL",
+	    "name": "UMECLIDINIUM/VILANTEROL",
         "class_code": "LABA",
         "class_label": "LABA-Containing Inhaler",
         "beers_know": "",
@@ -1582,7 +1615,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "VALACYCLOVIR HCL",
+	    "name": "VALACYCLOVIR",
         "class_code": "",
         "class_label": "",
         "beers_know": "",
@@ -1604,7 +1637,7 @@ const section2drug = [
         "cns_risk": false
     },
     {
-	    "name": "VALSARTAN‑HYDROCHLOROTHIAZIDE",
+	    "name": "VALSARTAN/HYDROCHLOROTHIAZIDE",
         "class_code": "ARB",
         "class_label": "ARB",
         "beers_know": "",
