@@ -1,5 +1,5 @@
 // ==========================================
-// 1. SMART PASTE HANDLER
+// 1. SMART PASTE HANDLER 
 // ==========================================
 document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('paste', function(e) {
