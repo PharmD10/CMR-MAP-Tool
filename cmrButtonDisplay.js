@@ -1,7 +1,12 @@
 // ==========================================
-// 1. SMART PASTE HANDLER 
+// 1. SMART PASTE HANDLER
 // ==========================================
 document.addEventListener('DOMContentLoaded', function() {
+  const vaccineSelector = '#vaxflu, #vaxcovid, #vaxrsv, #vaxpneu, #vaxshin, #vaxhepb, #vaxtet';
+  const vaccineBoxes = document.querySelectorAll(vaccineSelector);
+  vaccineBoxes.forEach(cb => {
+    cb.checked = false;
+  });
   document.addEventListener('paste', function(e) {
     const target = e.target;
     const isCondition = target.classList.contains('condition-cell');
